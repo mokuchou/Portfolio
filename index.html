@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>默默PROJECT</title>
     <style>
-        #myWeb,#aboutMe {
-            background-image: url(https://picsum.photos/1600/900?random=1);
+        #myWeb,
+        #aboutMe,
+        #myProject,
+        #contact {
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://picsum.photos/1600/900?random=1);
             background-repeat: no-repeat;
             height: 100vh;
             position: relative;
@@ -20,12 +26,63 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
         #aboutMe {
-            background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1));
+            background-image: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)), url(https://picsum.photos/1600/900?random=1);
+            /* background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1)); */
+        }
+
+        #myProject {
+            background-image: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)), url(https://picsum.photos/1600/900?random=1);
+            /* background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1)); */
+        }
+
+        #contact {
+            background-image: linear-gradient(rgba(10, 255, 180, 0.5), rgba(10, 255, 100, 0.5)), url(https://picsum.photos/1600/900?random=1);
+            /* background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1)); */
         }
 
         .myPages:not(:first-child) {
             display: none;
+        }
+
+        #mySkill img {
+            /* width: 12vw; */
+            animation-name: dealWithItNorm;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes dealWithItNorm {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            12.5% {
+                transform: rotate(5deg);
+            }
+
+            25% {
+                transform: rotate(10deg);
+            }
+            37.5% {
+                transform: rotate(5deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            62.5% {
+                transform: rotate(-5deg);
+            }
+            75% {
+                transform: rotate(-10deg);
+            }
+            87.5% {
+                transform: rotate(-5deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
         }
 
         .posFixed {
@@ -91,13 +148,25 @@
         </div>
         <div class="row">
             <div class="col-10 m-auto position-relative">
-                <div class="position-absolute bg-info myPages" id="mySkill" style="height: 65vh;">
-                    喜愛打造周邊意識生成創造環保模式完美穿著購買螢幕，醫生所在情況至於組成金屬一口氣各自聯盟體育高雄，衝突儘管斑竹宣佈百度總統按照瞭解我說信箱它的教育活動，有利於舉報雙手收益說完一下子道理呼吸夢幻主演雲林註冊時間，級別電話，優點主演上次完成變化去年每天上市監。
+                <div class="position-absolute myPages" id="mySkill" style="height: 65vh;">
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <img src="./img/php.png" alt="" style="width: 30vh;">
+                        <img src="./img/mysql.png" alt="" style="width: 30vh;">
+                        <img src="./img/python.png" alt="" style="width: 30vh;">
+                        <img src="./img/html.png" alt="" style="width: 30vh;">
+                        <img src="./img/css.png" alt="" style="width: 30vh;">
+                        <img src="./img/js.png" alt="" style="width: 30vh;">
+                        <img src="./img/git.png" alt="" style="width: 20vh;">
+                        <img src="./img/ps.png" alt="" style="width: 20vh;">
+                        <img src="./img/ai.png" alt="" style="width: 20vh;">
+                        <img src="./img/bs.png" alt="" style="width: 20vh;">
+                        <img src="./img/jq.png" alt="" style="width: 20vh;">
+                    </div>
                 </div>
-                <div class="position-absolute bg-success myPages" id="myExp" style="height: 65vh;">
+                <div class="position-absolute myPages" id="myExp" style="height: 65vh;">
                     瀏覽符合動物我覺得，淡淡那裡現象新聞一邊休閒官員，陽明山裝修見過上面事項股市爸爸原本，告訴我去年會在學者有利於，陽光刷新你們透露當中銷售印度一支，阿宅人民共和國選單軟體簡歷便宜不同，走了免費抱著犯罪以為強大財政小遊戲上有水果大學生休閒，管理系統以往，幫助。
                 </div>
-                <div class="position-absolute bg-warning myPages" id="myLicense" style="height: 65vh;">
+                <div class="position-absolute myPages" id="myLicense" style="height: 65vh;">
                     幽默光碟求助台北痛苦變得走勢辦公室回到和諧方面只不過，出口房屋網易供求不到但他沒人又有有限責任，透明無派青草湖這個需求突然羅東，網路居然行業騎士結束財富放在倒是交通填寫日前顧客好多群眾，指出運行最大所在地本公司，配置說什麼考核想起人數最好也會，航空繼續周。
                 </div>
             </div>
@@ -105,8 +174,8 @@
 
     </div>
     <!-- PROJECT -->
-    <div class="container-fluid" style="margin-top: 75vh;">
-        <div class="row" id="myProject">
+    <div class="container-fluid" id="myProject">
+        <div class="row">
             <div class="col-10 m-auto">
                 <h3 class="text-center">PROJECT</h3>
                 <hr>
@@ -175,8 +244,8 @@
         </div>
     </div>
     <!-- CONTACT -->
-    <div class="container mt-5">
-        <div class="row" id="contact">
+    <div class="container mt-5" id="contact">
+        <div class="row">
             <div class="col-10 m-auto">
                 <h3 class="text-center">CONTACT</h3>
                 <hr>
