@@ -9,27 +9,39 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>默默PROJECT</title>
     <style>
-        body {
+        #myWeb,#aboutMe {
+            background-image: url(https://picsum.photos/1600/900?random=1);
+            background-repeat: no-repeat;
+            height: 100vh;
             position: relative;
+            /* opacity: 0.5; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #aboutMe {
+            background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1));
         }
 
-        /* #mySkill {} */
-
-        #myExp {
+        .myPages:not(:first-child) {
             display: none;
         }
 
-        #myLicense {
-            display: none;
+        .posFixed {
+            margin: auto;
+            position: fixed;
+            top: 30px;
         }
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body>
+    <div id="myHeight" class="position-fixed mt-5" style="z-index: 99;">000</div>
     <!-- 首頁話語 -->
-    <div class="container mt-3">
+    <div class="container-fluid" id="myWeb">
         <div class="row">
-            <div class="col-9 text-center mt-4">
+            <div class="col-9 text-center mt-4 text-white">
                 <h3>哈囉！我是默默</h3>
                 <p>你知道嗎？</p>
                 <p>當我不講話的時候，就是我安靜的時候</p>
@@ -41,7 +53,7 @@
         </div>
     </div>
     <!-- 選單 -->
-    <nav class="navbar navbar-expand-sm bg-info justify-content-center sticky-top">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#aboutMe">ABOUT</a>
@@ -55,125 +67,53 @@
         </ul>
     </nav>
     <!-- ABOUT -->
-    <div class="container mt-5" id="aboutMe">
+    <div class="container-fluid" id="aboutMe">
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10">
-                <h3 class="text-center">ABOUT</h3>
+            <div class="col-10 m-auto">
+                <h3 class="text-center pt-5">ABOUT</h3>
                 <hr>
             </div>
-            <div class="col-1"></div>
         </div>
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-outline-info" onclick="textDisplay('mySkill')">Skills</button>
-                    <button type="button" class="btn btn-outline-info"
-                        onclick="textDisplay('myLicense')">License</button>
-                    <button type="button" class="btn btn-outline-info"
-                        onclick="textDisplay('myExp')">Experience</button>
-                </div>
+            <div class="col-10 m-auto">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <button class="nav-link" data-pages="mySkill">Skill</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-pages="myExp">Experience</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-pages="myLicense">License</button>
+                    </li>
+                </ul>
             </div>
-            <div class="col-4"></div>
         </div>
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10 d-flex flex-wrap align-items-center justify-content-center" id="mySkill">
-                <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
-                    <img src="./img/html.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:70%">
-                            70%</div>
-                    </div>
+            <div class="col-10 m-auto position-relative">
+                <div class="position-absolute bg-info myPages" id="mySkill" style="height: 65vh;">
+                    喜愛打造周邊意識生成創造環保模式完美穿著購買螢幕，醫生所在情況至於組成金屬一口氣各自聯盟體育高雄，衝突儘管斑竹宣佈百度總統按照瞭解我說信箱它的教育活動，有利於舉報雙手收益說完一下子道理呼吸夢幻主演雲林註冊時間，級別電話，優點主演上次完成變化去年每天上市監。
                 </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
-                    <img src="./img/php.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:60%">
-                            60%</div>
-                    </div>
+                <div class="position-absolute bg-success myPages" id="myExp" style="height: 65vh;">
+                    瀏覽符合動物我覺得，淡淡那裡現象新聞一邊休閒官員，陽明山裝修見過上面事項股市爸爸原本，告訴我去年會在學者有利於，陽光刷新你們透露當中銷售印度一支，阿宅人民共和國選單軟體簡歷便宜不同，走了免費抱著犯罪以為強大財政小遊戲上有水果大學生休閒，管理系統以往，幫助。
                 </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
-                    <img src="./img/css.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:70%">
-                            70%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
-                    <img src="./img/ps.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:60%">
-                            60%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
-                    <img src="./img/js.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:50%">
-                            50%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
-                    <img src="./img/ai.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:40%">
-                            40%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 30%;">
-                    <img src="./img/git.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:50%">
-                            50%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 30%;">
-                    <img src="./img/python.png" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:60%">
-                            60%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 30%;">
-                    <img src="./img/mysql.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:70%">
-                            70%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 30%;">
-                    <img src="./img/jq.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:30%">
-                            30%</div>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-center" style="width: 30%;">
-                    <img src="./img/bs.jpg" alt="" class="w-25">
-                    <div class="progress w-25">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:65%">
-                            65%</div>
-                    </div>
+                <div class="position-absolute bg-warning myPages" id="myLicense" style="height: 65vh;">
+                    幽默光碟求助台北痛苦變得走勢辦公室回到和諧方面只不過，出口房屋網易供求不到但他沒人又有有限責任，透明無派青草湖這個需求突然羅東，網路居然行業騎士結束財富放在倒是交通填寫日前顧客好多群眾，指出運行最大所在地本公司，配置說什麼考核想起人數最好也會，航空繼續周。
                 </div>
             </div>
-            <div class="col-1"></div>
         </div>
+
     </div>
     <!-- PROJECT -->
-    <div class="container mt-5">
+    <div class="container-fluid" style="margin-top: 75vh;">
         <div class="row" id="myProject">
-            <div class="col-1"></div>
-            <div class="col-10">
+            <div class="col-10 m-auto">
                 <h3 class="text-center">PROJECT</h3>
                 <hr>
             </div>
-            <div class="col-1"></div>
         </div>
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10 d-flex justify-content-between">
+            <div class="col-10 m-auto d-flex justify-content-between">
                 <div class="card">
                     <img src="./img/project1.png" class="card-img-top" alt="萬年曆" style="width: 260px;height: 180px;">
                     <div class="card-body">
@@ -199,11 +139,9 @@
                 </div>
 
             </div>
-            <div class="col-1"></div>
         </div>
         <div class="row mt-3">
-            <div class="col-1"></div>
-            <div id="carouselExampleIndicators" class="col-10 carousel slide" data-bs-ride="true">
+            <div id="carouselExampleIndicators" class="col-10 m-auto carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -234,18 +172,15 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="col-1"></div>
         </div>
     </div>
     <!-- CONTACT -->
     <div class="container mt-5">
         <div class="row" id="contact">
-            <div class="col-1"></div>
-            <div class="col-10">
+            <div class="col-10 m-auto">
                 <h3 class="text-center">CONTACT</h3>
                 <hr>
             </div>
-            <div class="col-1"></div>
         </div>
         <div class="row">
             <div class="col-4"></div>
@@ -274,7 +209,7 @@
         </div>
     </div>
     <!-- footer -->
-    <div class="container-fluid bg-info text-center text-white">
+    <div class="container-fluid bg-dark text-center text-white">
         <p>PHP資料庫網頁設計班-個人介紹網頁</p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
@@ -284,23 +219,30 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script>
-        function textDisplay(page) {
-            switch (page) {
-                case 'myExp':
-                    mySkillPos.textContent = "myExp";
-                    break;
+        $(window).scroll(function () {
+            let scrollTopValue = $(this).scrollTop();
+            $('#myHeight').text(scrollTopValue);
 
-                case 'myLicense':
-                    mySkillPos.textContent = "myLicense";
-                    break;
-
-                default:
-                    mySkillPos.textContent = "mySkill";
-                    break;
+            if (scrollTopValue > 250) {
+                // $('#aboutMe').addClass('posFixed');
+                // $('#mySkill').addClass('active');
             }
-        }
-        const mySkillPos = document.querySelector('#mySkill>p');
-        console.log(mySkillPos);
+            // 250 450 650 850
+            if (scrollTopValue > 850) {
+                // $('#aboutMe').removeClass('posFixed');
+            }
+        })
+        $(function () {
+
+            $('button').click(function () {
+                let getDataValue = $(this).data('pages');
+                console.log('getDataValue', getDataValue);
+                $('button').removeClass('active');
+                $(this).addClass('active');
+                $('.myPages').hide();
+                $(`#${getDataValue}`).show();
+            })
+        })
     </script>
 </body>
 
