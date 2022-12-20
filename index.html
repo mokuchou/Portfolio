@@ -40,13 +40,14 @@
         }
 
         /* .myPages:not(:first-child) { */
-        .myPages:nth-child(1),
-        .myPages:nth-child(3) {
+        .myPages:nth-child(2),
+        .myPages:nth-child(1) {
             display: none;
         }
 
         #mySkill img {
             /* width: 12vw; */
+            object-fit: contain;
             animation-name: iconAnimation;
             animation-duration: 1s;
             animation-iteration-count: infinite;
@@ -158,23 +159,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-10 m-auto position-relative">
-                <div class="position-absolute myPages" id="mySkill" style="height: 65vh;">
+            <div class="col-10 m-auto">
+                <div class="myPages" id="mySkill" style="height: 65vh;">
                     <div class="d-flex flex-wrap justify-content-between">
                         <img src="./img/php.png" alt="" style="width: 30vh;">
                         <img src="./img/mysql.png" alt="" style="width: 30vh;">
-                        <img src="./img/python.png" alt="" style="width: 30vh;">
-                        <img src="./img/html.png" alt="" style="width: 30vh;">
-                        <img src="./img/css.png" alt="" style="width: 30vh;">
-                        <img src="./img/js.png" alt="" style="width: 30vh;">
-                        <img src="./img/git.png" alt="" style="width: 20vh;">
-                        <img src="./img/ps.png" alt="" style="width: 20vh;">
-                        <img src="./img/ai.png" alt="" style="width: 20vh;">
+                        <img src="./img/python.png" alt="" style="width: 25vh;">
+                        <img src="./img/html.png" alt="" style="width: 25vh;">
+                        <img src="./img/js.png" alt="" style="width: 25vh;">
+                        <img src="./img/css.png" alt="" style="width: 25vh;">
+                        <img src="./img/git.png" alt="" style="width: 15vh;">
+                        <img src="./img/ps.png" alt="" style="width: 15vh;">
+                        <img src="./img/ai.png" alt="" style="width: 15vh;">
                         <img src="./img/bs.png" alt="" style="width: 20vh;">
                         <img src="./img/jq.png" alt="" style="width: 20vh;">
                     </div>
                 </div>
-                <div class="position-absolute myPages text-white" id="myExp" style="height: 65vh;">
+                <div class="myPages text-white mt-5" id="myExp" style="height: 65vh;">
                     <div class=" d-flex justify-content-between text-center myTimeline">
                         <h6>2010/7月<br>(5年4個月)</h6>
                         <h6>2015/6月<br>五專畢業</h6>
@@ -183,16 +184,16 @@
                         <h6>2017/10月<br>(2年)</h6>
                         <h6>2019/6月<br>(2年8個月)</h6>
                     </div>
-                    <div class=" d-flex justify-content-between">
-                        <div class="myTimelineList" style="left: 4%;">&nbsp;</div>
-                        <div class="myTimelineList" style="left: 2%;">&nbsp;</div>
-                        <div class="myTimelineList" style="left: 2%;">&nbsp;</div>
-                        <div class="myTimelineList" style="right: 2%;">&nbsp;</div>
-                        <div class="myTimelineList" style="right: 2%;">&nbsp;</div>
-                        <div class="myTimelineList" style="right: 4%;">&nbsp;</div>
+                    <div class="d-flex justify-content-end">
+                        <div class="myTimelineList" style="width: 16.5%;">&nbsp;</div>
+                        <div class="myTimelineList" style="width: 17.5%;">&nbsp;</div>
+                        <div class="myTimelineList" style="width: 17%;">&nbsp;</div>
+                        <div class="myTimelineList" style="width: 20%;">&nbsp;</div>
+                        <div class="myTimelineList" style="width: 19.5%;">&nbsp;</div>
+                        <div class="myTimelineList" style="width: 4.5%;">&nbsp;</div>
                         <!-- <div class="myTimelineList">&nbsp;</div> -->
                     </div>
-                    <div class=" d-flex justify-content-between text-center">
+                    <div class="d-flex justify-content-between text-center">
                         <div class="">
                             <h5>萊爾富</h5>
                             <p>副店長、工讀生</p>
@@ -203,7 +204,7 @@
                         </div>
                         <div class="">
                             <h5>誠品eslite café</h5>
-                            <p>內外場實習生</p>
+                            <p>內外場實習</p>
                         </div>
                         <div class="">
                             <h5>高雄餐旅大學</h5>
@@ -219,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="position-absolute myPages text-white" id="myLicense" style="height: 65vh;">
+                <div class="myPages text-white" id="myLicense" style="height: 65vh;">
                     <ul class="d-flex flex-column justify-content-between">
                         <li>TQC+程式語言-專業級(Python 3)</li>
                         <li>TQC+網頁資料擷取與分析-專業級(Python 3)</li>
@@ -235,7 +236,7 @@
     <div class="container-fluid" id="myProject">
         <div class="row">
             <div class="col-10 m-auto">
-                <h3 class="text-center">PROJECT</h3>
+                <h3 class="text-center pt-5">PROJECT</h3>
                 <hr>
             </div>
         </div>
@@ -305,7 +306,7 @@
     <div class="container mt-5" id="contact">
         <div class="row">
             <div class="col-10 m-auto">
-                <h3 class="text-center">CONTACT</h3>
+                <h3 class="text-center pt-5">CONTACT</h3>
                 <hr>
             </div>
         </div>
