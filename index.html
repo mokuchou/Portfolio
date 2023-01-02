@@ -9,6 +9,38 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>默默PROJECT</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        menu {
+            width: 2em;
+            height: 1em;
+            position: absolute;
+            top: calc(100vh + 0.5em);
+            right: 2.5em;
+            z-index: 99;
+        }
+
+        menu *[id^=menu] {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            transform-origin: 0px;
+        }
+
+        menu #menuTop {
+            top: 0;
+        }
+
+        menu #menuMid {
+            top: calc(0.5em - 1px);
+        }
+
+        menu #menuBot {
+            bottom: 0;
+        }
+
         #myWeb,
         #aboutMe,
         #myProject,
@@ -103,6 +135,15 @@
             position: relative;
             top: -10%;
         }
+
+        @media only screen and (min-width:768px) {
+            nav{
+                display: block;
+            }
+            menu{
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -123,7 +164,7 @@
         </div>
     </div>
     <!-- 選單 -->
-    <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top" style="z-index: 0;">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#">HOME</a>
@@ -139,6 +180,11 @@
             </li>
         </ul>
     </nav>
+    <menu>
+        <div id="menuTop"></div>
+        <div id="menuMid"></div>
+        <div id="menuBot"></div>
+    </menu>
     <!-- ABOUT -->
     <div class="container-fluid" id="aboutMe">
         <div class="row">
@@ -379,6 +425,26 @@
                 $(this).addClass('active');
                 $('.myPages').hide();
                 $(`#${getDataValue}`).show();
+            })
+
+            const nav = $('nav');
+            const menu = $('menu');
+            const menuTop = $('#menuTop');
+            const menuMid = $('#menuMid');
+            const menuBot = $('#menuBot');
+
+            menu.click(function () {
+                if (nav.css('display')=='none') {
+                    nav.css('display','flex');
+                    menuTop.css('transform','rotate(22deg)');
+                    menuMid.css('opacity','0');
+                    menuBot.css('transform','rotate(-22deg)');
+                } else {
+                    nav.css('display','none');
+                    menuTop.css('transform','rotate(0deg)');
+                    menuMid.css('opacity','1');
+                    menuBot.css('transform','rotate(0deg)');
+                }
             })
         })
     </script>
