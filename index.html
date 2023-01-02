@@ -40,13 +40,12 @@
         }
 
         /* .myPages:not(:first-child) { */
-        .myPages:nth-child(2),
+        .myPages:nth-child(3),
         .myPages:nth-child(1) {
             display: none;
         }
 
         #mySkill img {
-            /* width: 12vw; */
             object-fit: contain;
             animation-name: iconAnimation;
             animation-duration: 1s;
@@ -91,16 +90,18 @@
             }
         }
 
+        .myTimelineWidth {
+            width: calc(95% / 6);
+        }
+
         .myTimeline {
             border-bottom: 5px solid white;
         }
 
         .myTimelineList {
-            /* border: 3px dashed white; */
             border-left: 3px dashed white;
             position: relative;
             top: -10%;
-            /* left: 10%; */
         }
     </style>
 </head>
@@ -124,6 +125,9 @@
     <!-- 選單 -->
     <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top">
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#aboutMe">ABOUT</a>
             </li>
@@ -177,44 +181,50 @@
                 </div>
                 <div class="myPages text-white mt-5" id="myExp" style="height: 65vh;">
                     <div class=" d-flex justify-content-between text-center myTimeline">
-                        <h6>2010/7月<br>(5年4個月)</h6>
-                        <h6>2015/6月<br>五專畢業</h6>
-                        <h6>2016/7月<br>(7個月)</h6>
-                        <h6>2017/6月<br>二技畢業</h6>
-                        <h6>2017/10月<br>(2年)</h6>
-                        <h6>2019/6月<br>(2年8個月)</h6>
+                        <h6 class="myTimelineWidth">2010/7月<br>(5年4個月)</h6>
+                        <h6 class="myTimelineWidth">2015/6月<br>五專畢業</h6>
+                        <h6 class="myTimelineWidth">2016/7月<br>(7個月)</h6>
+                        <h6 class="myTimelineWidth">2017/6月<br>二技畢業</h6>
+                        <h6 class="myTimelineWidth">2017/10月<br>(2年)</h6>
+                        <h6 class="myTimelineWidth">2019/6月<br>(2年8個月)</h6>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <div class="myTimelineList" style="width: 16.5%;">&nbsp;</div>
-                        <div class="myTimelineList" style="width: 17.5%;">&nbsp;</div>
-                        <div class="myTimelineList" style="width: 17%;">&nbsp;</div>
-                        <div class="myTimelineList" style="width: 20%;">&nbsp;</div>
-                        <div class="myTimelineList" style="width: 19.5%;">&nbsp;</div>
-                        <div class="myTimelineList" style="width: 4.5%;">&nbsp;</div>
+                        <div class="myTimelineWidth myTimelineList" style="left: 2.5%;">&nbsp;
+                        </div>
+                        <div class="myTimelineWidth myTimelineList" style="left: 4%;">&nbsp;
+                        </div>
+                        <div class="myTimelineWidth myTimelineList" style="left: 5%;">&nbsp;
+                        </div>
+                        <div class="myTimelineWidth myTimelineList" style="left: 5.5%;">&nbsp;
+                        </div>
+                        <div class="myTimelineWidth myTimelineList" style="left: 6.5%;">&nbsp;
+                        </div>
+                        <div class="myTimelineWidth myTimelineList" style="left: 7.5%;">&nbsp;
+                        </div>
                         <!-- <div class="myTimelineList">&nbsp;</div> -->
                     </div>
                     <div class="d-flex justify-content-between text-center">
-                        <div class="">
+                        <div class="myTimelineWidth">
                             <h5>萊爾富</h5>
                             <p>副店長、工讀生</p>
                         </div>
-                        <div class="">
+                        <div class="myTimelineWidth">
                             <h5>台北商業大學</h5>
                             <p>企業管理系</p>
                         </div>
-                        <div class="">
+                        <div class="myTimelineWidth">
                             <h5>誠品eslite café</h5>
                             <p>內外場實習</p>
                         </div>
-                        <div class="">
+                        <div class="myTimelineWidth">
                             <h5>高雄餐旅大學</h5>
                             <p>餐飲管理系</p>
                         </div>
-                        <div class="">
-                            <h5>首阜企業管理顧問公司</h5>
+                        <div class="myTimelineWidth">
+                            <h5>首阜企業管理<br>顧問公司</h5>
                             <p>商品管理師、盤點人員</p>
                         </div>
-                        <div class="">
+                        <div class="myTimelineWidth">
                             <h5>桌遊天空城</h5>
                             <p>店長</p>
                         </div>
@@ -225,7 +235,7 @@
                         <li>TQC+程式語言-專業級(Python 3)</li>
                         <li>TQC+網頁資料擷取與分析-專業級(Python 3)</li>
                         <li>會計事務-人工記帳-丙級</li>
-                        <li>電腦軟體應用-丙級</li> 
+                        <li>電腦軟體應用-丙級</li>
                     </ul>
                 </div>
             </div>
