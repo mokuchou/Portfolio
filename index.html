@@ -9,9 +9,14 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>默默PROJECT</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
+
+        *[class^=myTxt] {
+            font-size: 8em;
+        }
+
         menu {
             width: 2em;
             height: 1em;
@@ -72,8 +77,8 @@
         }
 
         /* .myPages:not(:first-child) { */
-        .myPages:nth-child(3),
-        .myPages:nth-child(1) {
+        .myPages:nth-child(2),
+        .myPages:nth-child(3) {
             display: none;
         }
 
@@ -137,10 +142,11 @@
         }
 
         @media only screen and (min-width:768px) {
-            nav{
+            nav {
                 display: block;
             }
-            menu{
+
+            menu {
                 display: none;
             }
         }
@@ -162,9 +168,21 @@
                     height="200">
             </div>
         </div>
+        <div class="d-flex justify-content-center">
+            <div class="myTxt text-white">HE</div>
+            <div class="myTxt text-white">LLO</div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="myTxt text-white">I&nbsp;&nbsp;</div>
+            <div class="myTxt text-white">AM</div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="myTxt text-white">MO</div>
+            <div class="myTxt text-white">KU</div>
+        </div>
     </div>
     <!-- 選單 -->
-    <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top" style="z-index: 0;">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top" style="z-index: 5;">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#">HOME</a>
@@ -197,13 +215,13 @@
             <div class="col-10 m-auto">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <button class="nav-link" data-pages="mySkill">Skill</button>
+                        <button class="nav-link text-info active" data-pages="mySkill">Skill</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" data-pages="myExp">Experience</button>
+                        <button class="nav-link text-info" data-pages="myExp">Experience</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" data-pages="myLicense">License</button>
+                        <button class="nav-link text-info" data-pages="myLicense">License</button>
                     </li>
                 </ul>
             </div>
@@ -212,17 +230,17 @@
             <div class="col-10 m-auto">
                 <div class="myPages" id="mySkill" style="height: 65vh;">
                     <div class="d-flex flex-wrap justify-content-between">
-                        <img src="./img/php.png" alt="" style="width: 30vh;">
-                        <img src="./img/mysql.png" alt="" style="width: 30vh;">
-                        <img src="./img/python.png" alt="" style="width: 25vh;">
-                        <img src="./img/html.png" alt="" style="width: 25vh;">
-                        <img src="./img/js.png" alt="" style="width: 25vh;">
-                        <img src="./img/css.png" alt="" style="width: 25vh;">
-                        <img src="./img/git.png" alt="" style="width: 15vh;">
-                        <img src="./img/ps.png" alt="" style="width: 15vh;">
-                        <img src="./img/ai.png" alt="" style="width: 15vh;">
-                        <img src="./img/bs.png" alt="" style="width: 20vh;">
-                        <img src="./img/jq.png" alt="" style="width: 20vh;">
+                        <img src="./img/php.png" alt="" style="width: 25vw;max-width: 250px;">
+                        <img src="./img/mysql.png" alt="" style="width: 25vw;max-width: 250px;">
+                        <img src="./img/python.png" alt="" style="width: 25vw;max-width: 250px;">
+                        <img src="./img/html.png" alt="" style="width: 20vw;max-width: 200px;">
+                        <img src="./img/js.png" alt="" style="width: 20vw;max-width: 200px;">
+                        <img src="./img/css.png" alt="" style="width: 20vw;max-width: 200px;">
+                        <img src="./img/bs.png" alt="" style="width: 20vw;max-width: 200px;">
+                        <img src="./img/jq.png" alt="" style="width: 20vw;max-width: 200px;">
+                        <img src="./img/git.png" alt="" style="width: 15vw;max-width: 150px;">
+                        <img src="./img/ps.png" alt="" style="width: 15vw;max-width: 150px;">
+                        <img src="./img/ai.png" alt="" style="width: 15vw;max-width: 150px;">
                     </div>
                 </div>
                 <div class="myPages text-white mt-5" id="myExp" style="height: 65vh;">
@@ -403,20 +421,41 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script>
-        $(window).scroll(function () {
-            let scrollTopValue = $(this).scrollTop();
-            $('#myHeight').text(scrollTopValue);
-
-            if (scrollTopValue > 250) {
-                // $('#aboutMe').addClass('posFixed');
-                // $('#mySkill').addClass('active');
-            }
-            // 250 450 650 850
-            if (scrollTopValue > 850) {
-                // $('#aboutMe').removeClass('posFixed');
-            }
-        })
         $(function () {
+            const myTxtOdd = $('.myTxt:odd');
+            const myTxtEven = $('.myTxt:even');
+            
+            $(window).scroll(function () {
+                let scrollTopValue = $(this).scrollTop();
+                let scrollWidthValue = $(this).width();
+                $('#myHeight').text(scrollTopValue + ',' + scrollWidthValue);
+
+                if (scrollTopValue*3 < scrollWidthValue) {
+                    myTxtOdd.css('transform',`translateX(${scrollTopValue}px)`);
+                    myTxtEven.css('transform',`translateX(-${scrollTopValue}px)`);
+                }
+            })
+
+            const nav = $('nav');
+            const menu = $('menu');
+            const menuTop = $('#menuTop');
+            const menuMid = $('#menuMid');
+            const menuBot = $('#menuBot');
+
+            menu.click(function () {
+                if (nav.css('display') == 'none') {
+                    nav.css('display', 'flex');
+                    menuTop.css('transform', 'rotate(22deg)');
+                    menuMid.css('opacity', '0');
+                    menuBot.css('transform', 'rotate(-22deg)');
+                } else {
+                    nav.css('display', 'none');
+                    menuTop.css('transform', 'rotate(0deg)');
+                    menuMid.css('opacity', '1');
+                    menuBot.css('transform', 'rotate(0deg)');
+                }
+            })
+
 
             $('button').click(function () {
                 let getDataValue = $(this).data('pages');
@@ -427,25 +466,6 @@
                 $(`#${getDataValue}`).show();
             })
 
-            const nav = $('nav');
-            const menu = $('menu');
-            const menuTop = $('#menuTop');
-            const menuMid = $('#menuMid');
-            const menuBot = $('#menuBot');
-
-            menu.click(function () {
-                if (nav.css('display')=='none') {
-                    nav.css('display','flex');
-                    menuTop.css('transform','rotate(22deg)');
-                    menuMid.css('opacity','0');
-                    menuBot.css('transform','rotate(-22deg)');
-                } else {
-                    nav.css('display','none');
-                    menuTop.css('transform','rotate(0deg)');
-                    menuMid.css('opacity','1');
-                    menuBot.css('transform','rotate(0deg)');
-                }
-            })
         })
     </script>
 </body>
