@@ -377,7 +377,7 @@
         </div>
     </div>
     <!-- CONTACT -->
-    <div class="container mt-5" id="contact">
+    <div class="container-fluid" id="contact">
         <div class="row">
             <div class="col-10 m-auto">
                 <h3 class="text-center pt-5">CONTACT</h3>
@@ -385,29 +385,26 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <form action="">
-                    <form action="#" method="post">
-                        <div class="mb-3 mt-3">
-                            <label for="guestName">NAME:</label>
-                            <input type="text" class="form-control" id="guestName" name="guestName">
-                        </div>
-                        <div class="mb-3">
-                            <label for="guestPhone">TELEPHONE:</label>
-                            <input type="text" class="form-control" id="guestPhone" name="guestPhone">
-                        </div>
-                        <div class="mb-3">
-                            <label for="guestSay">MESSAGE:</label>
-                            <textarea class="form-control" name="guestSay" id="guestSay" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="mb-3 text-end">
-                            <button type="submit" class="btn btn-outline-info" disabled>CONTACT</button>
-                        </div>
-                    </form>
+                <form class="col-5 m-auto" action="#" method="post">
+                    <div class="my-3">
+                        <label for="guestName">NAME:</label>
+                        <input type="text" class="form-control" id="guestName" name="guestName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="guestPhone">TELEPHONE:</label>
+                        <input type="text" class="form-control" id="guestPhone" name="guestPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="guestMsg">MESSAGE:</label>
+                        <textarea class="form-control" name="guestMsg" id="guestMsg" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="mb-3 text-end">
+                        <button type="submit" class="btn btn-outline-info" disabled>CONTACT</button>
+                    </div>
                 </form>
-            </div>
-            <div class="col-4"></div>
+                <div class="col-5 m-auto">
+                    <div class="">123</div>
+                </div>
         </div>
     </div>
     <!-- footer -->
@@ -424,15 +421,15 @@
         $(function () {
             const myTxtOdd = $('.myTxt:odd');
             const myTxtEven = $('.myTxt:even');
-            
+
             $(window).scroll(function () {
                 let scrollTopValue = $(this).scrollTop();
                 let scrollWidthValue = $(this).width();
                 $('#myHeight').text(scrollTopValue + ',' + scrollWidthValue);
 
-                if (scrollTopValue*3 < scrollWidthValue) {
-                    myTxtOdd.css('transform',`translateX(${scrollTopValue}px)`);
-                    myTxtEven.css('transform',`translateX(-${scrollTopValue}px)`);
+                if (scrollTopValue * 3 < scrollWidthValue) {
+                    myTxtOdd.css('transform', `translateX(${scrollTopValue}px)`);
+                    myTxtEven.css('transform', `translateX(-${scrollTopValue}px)`);
                 }
             })
 
