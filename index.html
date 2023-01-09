@@ -50,7 +50,8 @@
         #aboutMe,
         #myProject,
         #contact {
-            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://picsum.photos/1600/900?random=1);
+            /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://picsum.photos/1600/900?random=1); */
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://picsum.photos/id/509/1600/900);
             background-repeat: no-repeat;
             height: 100vh;
             position: relative;
@@ -63,18 +64,18 @@
 
         #aboutMe {
             background-image: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)), url(https://picsum.photos/1600/900?random=2);
-            /* background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1)); */
+            /* background: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)); */
         }
 
         #myProject {
             height: inherit;
             background-image: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)), url(https://picsum.photos/1600/900?random=3);
-            /* background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1)); */
+            /* background: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)); */
         }
 
         #contact {
             background-image: linear-gradient(rgba(10, 255, 180, 0.5), rgba(10, 255, 100, 0.5)), url(https://picsum.photos/1600/900?random=4);
-            /* background: linear-gradient(rgba(10,150,255,0.5),rgba(150,10,255,1)); */
+            /* background: linear-gradient(rgba(10, 255, 180, 0.5), rgba(10, 255, 100, 0.5)); */
         }
 
         /* .myPages:not(:first-child) { */
@@ -159,14 +160,15 @@
     <!-- 首頁話語 -->
     <div class="container-fluid" id="myWeb">
         <div class="row">
-            <div class="col-9 text-center mt-4 text-white">
+            <div class="col-4 text-center">
+                <img src="https://picsum.photos/id/237/300/300" class="img-thumbnail" alt="Cinque Terre" width="200"
+                height="200">
+            </div>
+            <div class="col-3"></div>
+            <div class="col-5 text-center mt-4 text-white">
                 <h3>哈囉！我是默默</h3>
                 <p>你知道嗎？</p>
                 <p>當我不講話的時候，就是我安靜的時候</p>
-            </div>
-            <div class="col-3">
-                <img src="https://picsum.photos/id/237/300/300" class="img-thumbnail" alt="Cinque Terre" width="200"
-                    height="200">
             </div>
         </div>
         <div class="d-flex justify-content-center">
@@ -404,26 +406,26 @@
             </div>
         </div>
         <div class="row">
-                <form class="col-5 m-auto" action="#" method="post">
-                    <div class="my-3">
-                        <label for="guestName">NAME:</label>
-                        <input type="text" class="form-control" id="guestName" name="guestName">
-                    </div>
-                    <div class="mb-3">
-                        <label for="guestPhone">TELEPHONE:</label>
-                        <input type="text" class="form-control" id="guestPhone" name="guestPhone">
-                    </div>
-                    <div class="mb-3">
-                        <label for="guestMsg">MESSAGE:</label>
-                        <textarea class="form-control" name="guestMsg" id="guestMsg" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="mb-3 text-end">
-                        <button type="submit" class="btn btn-outline-info" disabled>CONTACT</button>
-                    </div>
-                </form>
-                <div class="col-5 m-auto">
-                    <div class="">123</div>
+            <form class="col-5 m-auto" action="#" method="post">
+                <div class="my-3">
+                    <label for="guestName">NAME:</label>
+                    <input type="text" class="form-control" id="guestName" name="guestName">
                 </div>
+                <div class="mb-3">
+                    <label for="guestPhone">TELEPHONE:</label>
+                    <input type="text" class="form-control" id="guestPhone" name="guestPhone">
+                </div>
+                <div class="mb-3">
+                    <label for="guestMsg">MESSAGE:</label>
+                    <textarea class="form-control" name="guestMsg" id="guestMsg" cols="30" rows="10"></textarea>
+                </div>
+                <div class="mb-3 text-end">
+                    <button type="submit" class="btn btn-outline-info" disabled>CONTACT</button>
+                </div>
+            </form>
+            <div class="col-5 m-auto">
+                <div class="">123</div>
+            </div>
         </div>
     </div>
     <!-- footer -->
