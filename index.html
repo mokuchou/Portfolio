@@ -162,7 +162,7 @@
         <div class="row">
             <div class="col-4 text-center">
                 <img src="https://picsum.photos/id/237/300/300" class="img-thumbnail" alt="Cinque Terre" width="200"
-                height="200">
+                    height="200">
             </div>
             <div class="col-3"></div>
             <div class="col-5 text-center mt-4 text-white">
@@ -424,7 +424,8 @@
                 </div>
             </form>
             <div class="col-5 m-auto">
-                <div class="">123</div>
+                <div class="" id="myDateTime">123</div>
+                <div class="" id="myWeather">123</div>
             </div>
         </div>
     </div>
@@ -440,6 +441,7 @@
         crossorigin="anonymous"></script>
     <script>
         $(function () {
+            // 首頁歡迎字左右位移
             const myTxtOdd = $('.myTxt:odd');
             const myTxtEven = $('.myTxt:even');
 
@@ -454,6 +456,7 @@
                 }
             })
 
+            // RWD menu 顯示
             const nav = $('nav');
             const menu = $('menu');
             const menuTop = $('#menuTop');
@@ -474,7 +477,7 @@
                 }
             })
 
-
+            // About分頁
             $('.myBtn').click(function () {
                 let getDataValue = $(this).data('pages');
                 console.log('getDataValue', getDataValue);
@@ -484,6 +487,62 @@
                 $(`#${getDataValue}`).show();
             })
 
+            // 取得現在的日期及時間
+            const myDateTime = $('#myDateTime');
+            let myDateTimeTxt = "";
+            let nowTime = new Date();
+            console.log(nowTime);
+            let nowTimeYear = nowTime.getFullYear();
+            let nowTimeMonth = nowTime.getMonth() + 1;
+            let nowTimeDate = nowTime.getDate();
+            let nowTimeHours = nowTime.getHours();
+            let nowTimeMinutes = nowTime.getMinutes();
+            nowTimeMinutes = (nowTimeMinutes < 10) ? '0' + nowTimeMinutes : nowTimeMinutes;
+            myDateTimeTxt = `
+            <div>
+                ${nowTimeYear} / ${nowTimeMonth} / ${nowTimeDate}
+                ${nowTimeHours} : ${nowTimeMinutes}
+            </div>
+            `;
+            myDateTime.html(myDateTimeTxt);
+
+            // ajax取得天氣api
+            const myWeather = $('#myWeather');
+            let myWeatherTxt = "";
+            $.ajax({
+                type: "get",
+                url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-16AF35E3-4A58-495C-8C63-84B8F6EBD717",
+                dataType: "json",
+                success: function (res) {
+                    console.log(res);
+                    console.log(res.records.location);
+                    let data = res.records.location;
+                    function weatherFun(area) {
+                        let dataTimeHour = data[area].weatherElement[2].time[1].startTime.split(" ")[1].split(":")[0];
+                        dataTimeHour = (dataTimeHour < 13) ? 'day' : 'night';
+                        let imgPath = `./img/${dataTimeHour}/${data[area].weatherElement[0].time[0].parameter.parameterValue}.svg`;
+                        myWeatherTxt = `
+                            ${data[area].locationName}
+                            ${data[area].weatherElement[2].time[0].parameter.parameterName}
+                            &deg;c
+                            ~
+                            ${data[area].weatherElement[4].time[0].parameter.parameterName}
+                            &deg;c
+                            ${data[area].weatherElement[0].time[0].parameter.parameterName}
+                            <img src="${imgPath}" style="width:1rem;">
+                        `;
+
+                        myWeather.html(myWeatherTxt);
+                    }
+                    weatherFun(0);
+                    let count = 0;
+                    // setInterval(function () {
+                    //     count++;
+                    //     count = (count>data.length)?0:count;
+                    //     weatherFun(count);
+                    // },3000)
+                }
+            });
         })
     </script>
 </body>
