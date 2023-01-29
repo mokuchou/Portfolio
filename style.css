@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    /* overflow-x: hidden; */
 }
 
 *[class^=myTxt] {
@@ -9,12 +10,12 @@
 menu {
     width: 2em;
     height: 1em;
-    /* position: absolute; */
-    /* top: calc(100vh + 1rem); */
-    /* right: 3.5rem; */
+    /* position: absolute;
+    top: calc(100vh + 1.2rem);
+    left: 70vw; */
     position: sticky;
-    /* top: 30vh; */
-    left: 75vw;
+    top: 30vh;
+    left: 70vw;
     z-index: 99;
 }
 
