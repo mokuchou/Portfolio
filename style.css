@@ -57,14 +57,14 @@ menu #menuBot {
 
 #aboutMe {
     background-image: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)), url(https://picsum.photos/1600/900?random=2);
-    background-image: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)), url(https://picsum.photos/1600/900?random=3);
+    /* background-image: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)), url(https://picsum.photos/1600/900?random=3); */
     /* background: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)); */
 }
 
 #myProject {
     height: inherit;
     background-image: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)), url(https://picsum.photos/1600/900?random=3);
-    background-image: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)), url(https://picsum.photos/1600/900?random=2);
+    /* background-image: linear-gradient(rgba(10, 150, 255, 0.5), rgba(150, 10, 255, 0.5)), url(https://picsum.photos/1600/900?random=2); */
     /* background: linear-gradient(rgba(255, 180, 10, 0.5), rgba(255, 100, 10, 0.5)); */
 }
 
@@ -84,7 +84,7 @@ menu #menuBot {
     animation-name: iconAnimation;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    width: 15vw;
+    width: 13vw;
 }
 
 @keyframes iconAnimation {
